@@ -5,7 +5,6 @@ var startTime;
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
-	startTime = new Date().getTime();
 });
 
 $(".likeBtn").click(function() {
@@ -20,5 +19,5 @@ $(".likeBtn").click(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	// your code here
+	startTime = new Date().getTime();
 }
