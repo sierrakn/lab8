@@ -16,7 +16,7 @@ var project = require('./routes/project');
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3001);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
@@ -37,6 +37,7 @@ if ('development' == app.get('env')) {
 
 // Add routes here
 app.get('/', index.view);
+app.get('/grid', index.viewGrid);
 app.get('/project/:id', project.view);
 // Example route
 // app.get('/users', user.list);
